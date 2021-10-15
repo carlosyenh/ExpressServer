@@ -83,6 +83,6 @@ app.get('/', (req, res) => {
 
     //cualquiercosa('mundo');
     //res.send('hello world');
-    res.status(301).redirect("https://www.google.com")
+    res.status(301).redirect("https://www.instagram.com/")
 
 });
