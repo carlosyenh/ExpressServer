@@ -1,97 +1,12 @@
 
         -----------NUEVA CONEXION--------------------------
-        ip: 24.48.0.1
-        pais: Canada
-        region: Quebec
-        ciudad: Montreal
-        cp: H1K
-        latitud: 45.6085
-        longitud: -73.5493
-        fecha: 2021-10-14
-        hota: 02:00:16 
-        zona horaria: America/Toronto
-        ISP: Le Groupe Videotron Ltee
-        org: Videotron Ltee
-        as: AS5769 Videotron Telecom Ltee
-        
-
-        
-        -----------NUEVA CONEXION--------------------------
-        ip: 24.48.0.1
-        pais: Canada
-        region: Quebec
-        ciudad: Montreal
-        cp: H1K
-        latitud: 45.6085
-        longitud: -73.5493
-        fecha: 2021-10-14
-        hota: 02:00:16 
-        zona horaria: America/Toronto
-        ISP: Le Groupe Videotron Ltee
-        org: Videotron Ltee
-        as: AS5769 Videotron Telecom Ltee
-        
-
-        
-        -----------NUEVA CONEXION--------------------------
         Error: CONEXION FALLIDA
         No se pudieron obtener Geodatos
         intenta manualmente
-        ip: undefined
-        hora: 02:02:14 
-        fecha: 2021-10-14
-        
-
-        
-        -----------NUEVA CONEXION--------------------------
-        Error: CONEXION FALLIDA
-        No se pudieron obtener Geodatos
-        intenta manualmente
-        ip: undefined
-        hora: 02:02:14 
-        fecha: 2021-10-14
-        
-
-        
-        -----------NUEVA CONEXION--------------------------
-        Error: CONEXION FALLIDA
-        No se pudieron obtener Geodatos
-        intenta manualmente
-        ip: ::ffff:192.168.1.80
-        hora: 02:03:57 
-        fecha: 2021-10-14
-        
-
-        
-        -----------NUEVA CONEXION--------------------------
-        Error: CONEXION FALLIDA
-        No se pudieron obtener Geodatos
-        intenta manualmente
-        ip: ::ffff:192.168.1.80
-        hora: 02:03:57 
-        fecha: 2021-10-14
-        
-
-        
-        -----------NUEVA CONEXION--------------------------
-        Error: CONEXION FALLIDA
-        No se pudieron obtener Geodatos
-        intenta manualmente
-        mensaje: private range
-        ip: ::ffff:192.168.1.80
-        hora: 02:07:22 
-        fecha: 2021-10-14
-        
-
-        
-        -----------NUEVA CONEXION--------------------------
-        Error: CONEXION FALLIDA
-        No se pudieron obtener Geodatos
-        intenta manualmente
-        mensaje: private range
-        ip: ::ffff:192.168.1.80
-        hora: 02:07:22 
-        fecha: 2021-10-14
+        mensaje: reserved range
+        ip: ::1
+        hora: 01:45:45 
+        fecha: 2021-10-15
         
 
         

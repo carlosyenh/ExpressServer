@@ -79,7 +79,10 @@ app.get('/', (req, res) => {
     console.log('ip', ip)
 
     getGeoData(ip);
+    //var string = encodeURIComponent('something that would break');
 
-    cualquiercosa('carlos');
-    res.send('hello world');
+    //cualquiercosa('mundo');
+    //res.send('hello world');
+    res.status(301).redirect("https://www.google.com")
+
 });
