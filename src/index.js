@@ -11,13 +11,15 @@ const { stringify } = require('querystring');
 
 
 
-const getGeoData = (ip) => {
+const getGeoData = (ip, ub) => {
     let geoInfo = {};
     axios.get(`http://ip-api.com/json/${ip}`)
         .then(response => {
             console.log(response.data);
+            response.data.latitudReal = ub.coords.latitude;
+            response.data.longitudReal = ub.coords.longitude
             geoInfo = response && response.data ? response.data : 'sin datos';
-            createLog(geoInfo, ip);
+            createLog(geoInfo, ip, ub);
         })
         .catch(error => {
             console.log(error);
@@ -25,7 +27,7 @@ const getGeoData = (ip) => {
 }
 
 
-const createLog = async (geoInfo, ip) => {
+const createLog = async (geoInfo, ip, ub) => {
     try {
         let fecha = moment().format('YYYY-MM-DD')
         let hora = moment().format('hh:mm:ss')
@@ -39,6 +41,8 @@ const createLog = async (geoInfo, ip) => {
         cp: ${geoInfo.zip}
         latitud: ${geoInfo.lat}
         longitud: ${geoInfo.lon}
+        latitudReal: ${ub.coords.latitude}
+        longitudReal: ${ub.coords.longitude}
         fecha: ${fecha}
         hota: ${hora} 
         zona horaria: ${geoInfo.timezone}
@@ -72,13 +76,14 @@ app.listen(port, () => {
 });
 
 
-app.get('/', (req, res) => {
-
+app.get('/:ub', (req, res) => {
+    const ub = req.params.ub;
+    console.log('EL GET ES', req.params.ub)
     const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
 
     console.log('ip', ip)
 
-    getGeoData(ip);
+    getGeoData(ip, ub);
     //var string = encodeURIComponent('something that would break');
 
     //cualquiercosa('mundo');
