@@ -15,9 +15,10 @@ const getGeoData = (ip, ub) => {
     let geoInfo = {};
     axios.get(`http://ip-api.com/json/${ip}`)
         .then(response => {
-            console.log(response.data);
+            
             response.data.latitudReal = ub.coords.latitude;
-            response.data.longitudReal = ub.coords.longitude
+            response.data.longitudReal = ub.coords.longitude;
+            console.log(response.data);
             geoInfo = response && response.data ? response.data : 'sin datos';
             createLog(geoInfo, ip, ub);
         })
