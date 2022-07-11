@@ -15,9 +15,7 @@ const getGeoData = (ip, ub) => {
     let geoInfo = {};
     axios.get(`http://ip-api.com/json/${ip}`)
         .then(response => {
-            ub.map((item)=>{
-                return console.log('ub', item )
-            });
+            console.dir('GEO', ub);
 
 
             //response.data.latitudReal = ub.coords.latitude;
