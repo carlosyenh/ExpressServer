@@ -15,7 +15,7 @@ const getGeoData = (ip, ub) => {
     let geoInfo = {};
     axios.get(`http://ip-api.com/json/${ip}`)
         .then(response => {
-            console.log('ubicacion en funcion', ub.coords);
+            console.log('ubicacion en funcion', ub.GeolocationPosition);
 
 
             //response.data.latitudReal = ub.coords.latitude;
