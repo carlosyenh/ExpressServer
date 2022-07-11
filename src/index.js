@@ -44,8 +44,7 @@ const createLog = async (geoInfo, ip, ub) => {
         cp: ${geoInfo.zip}
         latitud: ${geoInfo.lat}
         longitud: ${geoInfo.lon}
-        latitudReal: ${ub.coords.latitude}
-        longitudReal: ${ub.coords.longitude}
+       
         fecha: ${fecha}
         hota: ${hora} 
         zona horaria: ${geoInfo.timezone}
