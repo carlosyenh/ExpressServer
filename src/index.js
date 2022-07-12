@@ -17,14 +17,11 @@ const getGeoData = (ip, lat, lon) => {
         .then(response => {
             console.log('ubicacion en funcion', lat);
             console.log('ubicacion en funcion', lon);
-
-
-
-            //response.data.latitudReal = ub.coords.latitude;
-            //response.data.longitudReal = ub.coords.longitude;
+            response.data.latitudReal = lat;
+            response.data.longitudReal = lon;
             console.log(response.data);
             geoInfo = response && response.data ? response.data : 'sin datos';
-            createLog(geoInfo, ip, ub);
+            createLog(geoInfo, ip, lat, lon);
         })
         .catch(error => {
             console.log(error);
@@ -32,7 +29,7 @@ const getGeoData = (ip, lat, lon) => {
 }
 
 
-const createLog = async (geoInfo, ip, ub) => {
+const createLog = async (geoInfo, ip, lat, lon) => {
     try {
         let fecha = moment().format('YYYY-MM-DD')
         let hora = moment().format('hh:mm:ss')
