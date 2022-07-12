@@ -11,11 +11,13 @@ const { stringify } = require('querystring');
 
 
 
-const getGeoData = (ip, ub) => {
+const getGeoData = (ip, lat, lon) => {
     let geoInfo = {};
     axios.get(`http://ip-api.com/json/${ip}`)
         .then(response => {
-            console.log('ubicacion en funcion', ub.GeolocationPosition);
+            console.log('ubicacion en funcion', lat);
+            console.log('ubicacion en funcion', lon);
+
 
 
             //response.data.latitudReal = ub.coords.latitude;
@@ -78,14 +80,16 @@ app.listen(port, () => {
 });
 
 
-app.get('/:ub', (req, res) => {
-    const ub = req.params.ub;
-    console.log('EL GET ES', req.params.ub)
+app.get('/:lat/:lon', (req, res) => {
+    const lat = req.params.lat;
+    const lon = req.params.lon;
+
+    console.log('EL GET ES', lat)
     const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
 
     console.log('ip', ip)
 
-    getGeoData(ip, ub);
+    getGeoData(ip, lat, lon);
     //var string = encodeURIComponent('something that would break');
 
     //cualquiercosa('mundo');
